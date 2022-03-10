@@ -1,0 +1,48 @@
+1 git下载与安装
+下载 百度git 下载
+安装 默认安装c盘，一直下一步直到完成就可
+
+2 配置
+git config --global user.eamil "xxxx@xx"
+git config --global user.name "xxx"
+
+3 打开指定文件的目录进行初始化 git init
+git init 生成.git的隐藏文件
+
+4 添加文件到暂存区
+git add 文件名
+git add . (添加所有修改的文件和第一次添加的文件）
+
+5 提交文件到本地仓库
+git commit -m “描述”
+
+6 查看暂存区有没有被修改的文件
+git status
+
+7 查看当前文件与本地仓库有没有差别
+git diff 文件名
+
+8 查看所有的版本信息
+git log 
+git log --pretty=oneline （一行显示）
+查看所有版本的历史记录
+git reflog 
+
+9版本回退
+git reset --hard HEAD^ (回到上一个版本)
+git reset --hard HEAD^~数字 (回到前几个版本)
+git reset --hard 版本号（使用版本号回到指定的版本）
+
+10 撤销文件变更
+git checkout -- 文件名（还没git add）
+git reset HEAD 文件名（已经git add 把暂存区的东西去掉，然后再执行git checkout -- 文件名）
+版本回退（已经commit了）
+
+11 删除文件
+git rm 文件名  git commit -m “删除描述”
+git checkout -- 文件名（误删本地的文件还原，没有commit之前）
+
+12 github 
+1 注册账号 建立github与本地电脑的连接
+2 找到C:\Users\Administrator\.ssh下的id_rsa.pub文件， 如果没有id_rsa.pub文件，在该目录执行ssh-keygen -t rsa -C “邮箱号”
+3 进入github之后 点击头像--》settings--SSH and GPG keys 把id_rsa.pub文件的内容复制粘贴到github上的key以及写好title名字
