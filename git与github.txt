@@ -64,6 +64,12 @@ git branch  -d 分支名字
 
 暂存当前分支的内容
 git stash
+暂存列表
+git stash list
+暂存恢复
+git stash pop / git stash apply stash@{xx}
+应用某次commit变更到本分支
+git cherry-pick commitID
 
 拉取最新代码
 git pull
